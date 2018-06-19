@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Cransten API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -198,10 +198,10 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+      <script src="javascripts/all_nosearch.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,38 +211,101 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="shell">cURL</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#users" class="toc-h1 toc-link" data-title="users">Users</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="get-all-users">Get All Users</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#get-a-specific-user" class="toc-h2 toc-link" data-title="get-a-specific-user">Get a Specific User</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#update-a-specific-user" class="toc-h2 toc-link" data-title="update-a-specific-user">Update a Specific User</a>
+                  </li>
+                  <li>
+                    <a href="#get-current-user" class="toc-h2 toc-link" data-title="get-current-user">Get Current User</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-current-user" class="toc-h2 toc-link" data-title="update-a-current-user">Update a Current User</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                  </li>
+                  <li>
+                    <a href="#register-user" class="toc-h2 toc-link" data-title="register-user">Register User</a>
+                  </li>
+                  <li>
+                    <a href="#filter-users" class="toc-h2 toc-link" data-title="filter-users">Filter Users</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#user-updates" class="toc-h1 toc-link" data-title="user-updates">User Updates</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#change-user-password" class="toc-h2 toc-link" data-title="change-user-password">Change User Password</a>
+                  </li>
+                  <li>
+                    <a href="#change-user-email" class="toc-h2 toc-link" data-title="change-user-email">Change User Email</a>
+                  </li>
+                  <li>
+                    <a href="#change-user-role" class="toc-h2 toc-link" data-title="change-user-role">Change User Role</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-flags" class="toc-h2 toc-link" data-title="update-user-flags">Update User Flags</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-legal" class="toc-h2 toc-link" data-title="update-user-legal">Update User Legal</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-address" class="toc-h2 toc-link" data-title="update-user-address">Update User Address</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-cellphone" class="toc-h2 toc-link" data-title="update-user-cellphone">Update User Cellphone</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-bank-account" class="toc-h2 toc-link" data-title="update-user-bank-account">Update User Bank Account</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-tax-document" class="toc-h2 toc-link" data-title="update-user-tax-document">Update User Tax Document</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-job" class="toc-h2 toc-link" data-title="update-user-job">Update User Job</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-working-agreement" class="toc-h2 toc-link" data-title="update-user-working-agreement">Update User Working Agreement</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-job-license" class="toc-h2 toc-link" data-title="update-user-job-license">Update User Job License</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#additional-routes" class="toc-h1 toc-link" data-title="additional-routes">Additional routes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#file-upload" class="toc-h2 toc-link" data-title="file-upload">File upload</a>
+                  </li>
+                  <li>
+                    <a href="#create-status" class="toc-h2 toc-link" data-title="create-status">Create Status</a>
+                  </li>
+                  <li>
+                    <a href="#send-email-to-admin" class="toc-h2 toc-link" data-title="send-email-to-admin">Send Email to Admin</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -254,80 +317,223 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Cransten API! This is Cransten API endpoints, which can get information on users.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>We have language bindings in cURL! You can view code examples in the dark area to the right.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>This API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/oauth/token <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'</span> <span class="se">\</span>
+  -F <span class="nv">grant_type</span><span class="o">=</span>password <span class="se">\</span>
+  -F <span class="nv">client_id</span><span class="o">=</span>ID <span class="se">\</span>
+  -F <span class="nv">client_secret</span><span class="o">=</span>CLIENT SECRET <span class="se">\</span>
+  -F <span class="nv">username</span><span class="o">=</span>example@email.com <span class="se">\</span>
+  -F <span class="nv">password</span><span class="o">=</span>pass <span class="se">\</span>
+  -F <span class="nv">scope</span><span class="o">=</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace <code>CLIENT SECRET</code> with your client_secret and <code>ID</code> with your client_id.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Cransten uses API access tokens to allow access to the API.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Cransten API expects for the API access token to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>Authorization: Bearer ACCESS TOKEN</code></p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>ACCESS TOKEN</code> with your personal API access token.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above route returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Examplovic"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Examplivius"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/avatar/1/example-3.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"social_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3213-312-533"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"proof_of_liability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/licenses/2/user8proof.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"proof_of_liability_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25/05/2001"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hat_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"shirt_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percentages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"legal"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"total_overview"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/06/2018"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3 days ago"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"personal_info_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"additional_info_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"experience_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bank_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"legal_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"personal_info_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"additional_info_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"experience_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bank_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"legal_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 day ago"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"cellPhones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-888-7777"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cricket"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"bankAccounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"routing_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555588888"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"void_check_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/bank_info/1/voidcheck.jpeg"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sub-contractors"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Pool maintenance and Repair"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Home Rehab"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Load and Unload Only Moving Services"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Kitchen &amp; Appliances"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"licenses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electronic Equipment Assembler"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American Samoa"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"expiration_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19/06/2020"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"licenses_archive"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electronic Equipment Assembler"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American Samoa"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"expiration_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19/06/2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"legals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"background_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name_confirmation_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"visual_confirmation_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaptest.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"background_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/background_doc/1/ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name_confirmation_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/name_confirmation_doc/1/ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"visual_confirmation_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/visual_confirmation_doc/1/vaptest.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"visual_appearance_verification_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Drivers Licence"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name_verification_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Passport"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"bankDocuments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/tax_document/2/ffff2.pdf"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I-9"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"contracts_archive"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all users if role is super admin. </p>
+
+<p>If role is admin it retrieves all users who are not admins but without their bank account info.</p>
+
+<p>If role is user then it retrieves only that user that sent request.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>GET https://cransten.herokuapp.com/api/users/</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -336,90 +542,27 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="notice">
+Response depends on the role of the user that is sendig request!
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='get-a-specific-user'>Get a Specific User</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above route returns JSON structured like in the response <a href="#get-all-users">above</a>, only a single object.</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>This endpoint retrieves a specific user with ID.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>GET https://cransten.herokuapp.com/api/users/ID</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -429,11 +572,1331 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>The ID of the user to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-user'>Update a Specific User</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+  -d <span class="s1">'{
+  "first_name": "Example",
+  "last_name": "Examplovic",
+  "middle_name": "Examplivius",
+  "proof_of_liability": "proof",
+  "proof_of_liability_link": "link",
+  "user_image": "link",
+  "date_of_birth": "25/05/2001",
+  "hat_size": "L",
+  "shirt_size": "L",
+  "social_number": "3213-312-533"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like in the response <a href="#get-all-users">above</a>.</p>
+</blockquote>
+
+<p>This endpoint updates a specific user with ID.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID</code></p>
+<h3 id='body-parameters'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first_name</td>
+<td>updates first name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>updates last name</td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>update middle name</td>
+</tr>
+<tr>
+<td>proof_of_liability</td>
+<td>user proof of liability name</td>
+</tr>
+<tr>
+<td>proof_of_liability_link</td>
+<td>user proof of liabilty link</td>
+</tr>
+<tr>
+<td>user_image</td>
+<td>link to user image</td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>user date of birth</td>
+</tr>
+<tr>
+<td>hat_size</td>
+<td>user hat size</td>
+</tr>
+<tr>
+<td>shirt_size</td>
+<td>user shirt size</td>
+</tr>
+<tr>
+<td>social_number</td>
+<td>user social security number</td>
+</tr>
+</tbody></table>
+<h2 id='get-current-user'>Get Current User</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.com/api/user <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like the response <a href="#get-all-users">above</a>, only a single object.</p>
+</blockquote>
+
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://cransten.herokuapp.com/api/user</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-current-user'>Update a Current User</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/user/ <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+  -d <span class="s1">'{
+  "first_name": "Example",
+  "last_name": "Examplovic",
+  "middle_name": "Examplivius",
+  "proof_of_liability": "proof",
+  "proof_of_liability_link": "link",
+  "user_image": "link",
+  "date_of_birth": "25/05/2001",
+  "hat_size": "L",
+  "shirt_size": "L",
+  "social_number": "3213-312-533"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like in the response <a href="#get-all-users">above</a>, only a single object.</p>
+</blockquote>
+
+<p>This endpoint updates a user that is sending the request.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/user/</code></p>
+<h3 id='body-parameters-2'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first_name</td>
+<td>updates first name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>updates last name</td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>update middle name</td>
+</tr>
+<tr>
+<td>proof_of_liability</td>
+<td>user proof of liability name</td>
+</tr>
+<tr>
+<td>proof_of_liability_link</td>
+<td>user proof of liabilty link</td>
+</tr>
+<tr>
+<td>user_image</td>
+<td>link to user image</td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>user date of birth</td>
+</tr>
+<tr>
+<td>hat_size</td>
+<td>user hat size</td>
+</tr>
+<tr>
+<td>shirt_size</td>
+<td>user shirt size</td>
+</tr>
+<tr>
+<td>social_number</td>
+<td>user social security number</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific user.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>DELETE https://cransten.herokuapp.com/api/users/ID</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the user to delete</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The message depends on wheter deletion was successful!
+</aside>
+<h2 id='register-user'>Register User</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/register/ <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "first_name": "Example",
+    "last_name": "Examplovic",
+    "middle_name": "Examplius",
+    "email": "example@email.com",
+    "password": "pass",
+    "role": "user"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like the response <a href="#get-all-users">above</a>, only a single object:</p>
+</blockquote>
+
+<p>This endpoint register a new user.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST https://cransten.herokuapp.com/register/</code></p>
+<h3 id='body-parameters-3'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first_name</td>
+<td>user first name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>user last name</td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>user middle name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>user email</td>
+</tr>
+<tr>
+<td>password</td>
+<td>user password</td>
+</tr>
+<tr>
+<td>role</td>
+<td>user role (default it is set to user)</td>
+</tr>
+</tbody></table>
+<h2 id='filter-users'>Filter Users</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/filter <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "type": "type2",
+    "keyword": "Milan",
+    "status": "awaiting",
+    "filters":
+    [
+        "skill3"
+    ]
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like the response <a href="#get-all-users">above</a>:</p>
+</blockquote>
+
+<p>This endpoint retreives users with certain filters.</p>
+
+<p>This route only retreives users with filters that are included in request.</p>
+
+<p>All of the role constrains that exist in request <a href="#get-all-users">above</a>, exist here also.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST https://cransten.herokuapp.com/api/users/filter</code></p>
+<h3 id='body-parameters-4'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>user job type to be filtered</td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>user last name or first name to be filtered</td>
+</tr>
+<tr>
+<td>status</td>
+<td>user status to be filtered</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>user job skills to be filtered</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Some of body paramteres can be excluded from request.
+</aside>
+<h1 id='user-updates'>User Updates</h1><h2 id='change-user-password'>Change User Password</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/password <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "old_password": "pass",
+  "new_password": "newpass"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password changed successfully!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint changes password of users with ID. </p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/password</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>old_password</td>
+<td>old user password</td>
+</tr>
+<tr>
+<td>new_password</td>
+<td>new user password</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The response depends on the success of the request! If an old password was incorrect or a new password is the same as an old one, a message containing an error is returned in the response.
+</aside>
+<h2 id='change-user-email'>Change User Email</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/email <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "old_email": "example@email.com",
+    "new_email": "newmail@email.com"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email changed successfully!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint changes email of users with ID. </p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/email</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-2'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>old_email</td>
+<td>old user email</td>
+</tr>
+<tr>
+<td>new_email</td>
+<td>new user email</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The response depends on the success of the request! If an old email was incorrect or a new email is the same as an old one, a message containing an error is returned in the response.
+</aside>
+<h2 id='change-user-role'>Change User Role</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/role <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "role": "super admin"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Examplovic"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Examplivius"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/avatar/1/example-3.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"social_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3213-312-533"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"proof_of_liability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/licenses/2/user8proof.pdf"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"proof_of_liability_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25/05/2001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hat_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shirt_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"percentages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"legal"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_overview"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/06/2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3 days ago"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"personal_info_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"additional_info_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"experience_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bank_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"legal_flag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"personal_info_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"additional_info_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"experience_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bank_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"legal_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 day ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"cellPhones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-888-7777"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cricket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"bankAccounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"routing_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555588888"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"void_check_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/bank_info/1/voidcheck.jpeg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sub-contractors"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Pool maintenance and Repair"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Home Rehab"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Load and Unload Only Moving Services"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Kitchen &amp; Appliances"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"licenses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electronic Equipment Assembler"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American Samoa"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"expiration_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19/06/2020"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"licenses_archive"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electronic Equipment Assembler"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American Samoa"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"expiration_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19/06/2018"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"legals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"background_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name_confirmation_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"visual_confirmation_doc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaptest.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"background_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/background_doc/1/ffff2.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name_confirmation_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/name_confirmation_doc/1/ffff2.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"visual_confirmation_doc_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/visual_confirmation_doc/1/vaptest.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"visual_appearance_verification_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Drivers Licence"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name_verification_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Passport"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"bankDocuments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.eu-central-1.amazonaws.com/cransten-images/files/tax_document/2/ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffff2.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I-9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract name"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"link"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"expiration_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11/21/2019"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"contracts_archive"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint changes role of users with ID. </p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/role</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-3'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>role</td>
+<td>new role of user</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The response depends on the role of the user that has sent request! If an role is not super admin, response contains message about it.
+</aside>
+<h2 id='update-user-flags'>Update User Flags</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/flag <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "personal_info_flag": "prsflag",
+  "additional_info_flag": "addflag",
+  "experience_flag": "expflag",
+  "bank_flag": "baflag",
+  "legal_flag": "leflag",
+  "personal_info_flag_msg": "addflagmsg",
+  "additional_info_flag_msg": "addflagmsg",
+  "experience_flag_msg": "expflagmsg",
+  "bank_flag_msg": "baflagmsg",
+  "legal_flag_msg": "leflagmsg"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like response <a href="#change-user-role">above</a>:</p>
+</blockquote>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+
+<p>This endpoint changes flags of users with ID, thats suggest if users should update neccessary sections. </p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/flag</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>personal_info_flag</td>
+<td>personal section flag</td>
+</tr>
+<tr>
+<td>additional_info_flag</td>
+<td>additional section flag</td>
+</tr>
+<tr>
+<td>experience_flag</td>
+<td>experience section flag</td>
+</tr>
+<tr>
+<td>bank_flag</td>
+<td>bank section flag</td>
+</tr>
+<tr>
+<td>legal_flag</td>
+<td>legal section flag</td>
+</tr>
+<tr>
+<td>personal_info_flag_msg</td>
+<td>personal section flag message</td>
+</tr>
+<tr>
+<td>additional_info_flag_msg</td>
+<td>additional section flag message</td>
+</tr>
+<tr>
+<td>experience_flag_msg</td>
+<td>experience section flag message</td>
+</tr>
+<tr>
+<td>bank_flag_msg</td>
+<td>bank section flag message</td>
+</tr>
+<tr>
+<td>legal_flag_msg</td>
+<td>legal section flag message</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-4'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>role</td>
+<td>new role of user</td>
+</tr>
+</tbody></table>
+<h2 id='update-user-legal'>Update User Legal</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/legals <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "background_doc": "b",
+    "visual_confirmation_doc": "vc",
+    "name_confirmation_doc": "nc",
+    "background_doc_link": "bl",
+    "visual_confirmation_doc_link": "vl",
+    "name_confirmation_doc_link": "nl",
+    "visual_appearance_verification_id": "Passport",
+    "name_verification_id": "Id"
+}'</span>
+</code></pre>
+<p>This endpoint update legal of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/legals</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-5'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>background_doc</td>
+<td>backgorund document name</td>
+</tr>
+<tr>
+<td>visual_confirmation_doc</td>
+<td>visual confirmation document name</td>
+</tr>
+<tr>
+<td>name_confirmation_doc</td>
+<td>name confirmation document name</td>
+</tr>
+<tr>
+<td>background_doc_link</td>
+<td>backgorund document link</td>
+</tr>
+<tr>
+<td>visual_confirmation_doc_link</td>
+<td>visual confirmation document link</td>
+</tr>
+<tr>
+<td>name_confirmation_doc_link</td>
+<td>name confirmation document link</td>
+</tr>
+<tr>
+<td>visual_appearance_verification_id</td>
+<td>visual verification option selected</td>
+</tr>
+<tr>
+<td>name_verification_id</td>
+<td>name verification option selected</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-address'>Update User Address</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/addresses <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "address": "779 Marquardt Camp\nStromanside, FL 46645-5023",
+    "city": "Corkeryside",
+    "state": "United States",
+    "zip": "23410",
+    "primary": "1"
+}'</span>
+</code></pre>
+<p>This endpoint update address of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/address</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-6'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>address</td>
+<td>address</td>
+</tr>
+<tr>
+<td>city</td>
+<td>city</td>
+</tr>
+<tr>
+<td>state</td>
+<td>state</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>zip code</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>is this primary address</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-cellphone'>Update User Cellphone</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/cellphones <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "number": "779",
+    "provider": "Corkeryside",
+    "primary": "1"
+}'</span>
+</code></pre>
+<p>This endpoint update cellphone of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/cellphones</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-7'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>number</td>
+<td>cellphone number</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>cellphone provider</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>is this primary cellphone</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-bank-account'>Update User Bank Account</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/banks <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "routing_number": "779",
+    "account_number": "41284198",
+    "bank_name": "Zimbabwe",
+    "primary": "1"
+}'</span>
+</code></pre>
+<p>This endpoint update bank info of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/banks</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-8'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>routing_number</td>
+<td>bank routing number</td>
+</tr>
+<tr>
+<td>account_number</td>
+<td>bank account number</td>
+</tr>
+<tr>
+<td>bank_name</td>
+<td>bank name</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>is this primary bank account</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-tax-document'>Update User Tax Document</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/bankdoucments <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "link": "O",
+    "name": "I",
+    "type": "W-4",
+    "archived_on": "6/2/2015"
+}'</span>
+</code></pre>
+<p>This endpoint update tax document of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/bankdoucments</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-9'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>link</td>
+<td>link to document</td>
+</tr>
+<tr>
+<td>name</td>
+<td>document name</td>
+</tr>
+<tr>
+<td>type</td>
+<td>document type</td>
+</tr>
+<tr>
+<td>archived_on</td>
+<td>date when the doucment was acrihved</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-job'>Update User Job</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/jobs <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "type": "Tehnician",
+    "licenses":[
+        {
+        "license": "Ms.",
+        "category": "Electronic Equipment Assembler",
+        "state": "American Samoa",
+        "link": "link",
+        "expiration_date": "11/21/2020"
+    }
+    ],
+    "skills":[
+            "Smart Home Installations",
+            "Everything from the handyman website"
+            ]
+}'</span>
+</code></pre>
+<p>This endpoint update job of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/jobs</code></p>
+<h3 id='url-parameters-10'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-10'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>job type</td>
+</tr>
+<tr>
+<td>licenses</td>
+<td>array of license objects</td>
+</tr>
+<tr>
+<td>license</td>
+<td>license name</td>
+</tr>
+<tr>
+<td>category</td>
+<td>license category</td>
+</tr>
+<tr>
+<td>state</td>
+<td>state where license was issued</td>
+</tr>
+<tr>
+<td>link</td>
+<td>link to document</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>expiration date of license</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>array skills user possess</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-working-agreement'>Update User Working Agreement</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/contracts <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "name": "newname",
+    "link": "newurl",
+    "expiration_date": "11/21/2016"
+}'</span>
+</code></pre>
+<p>This endpoint update working agreement of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/contracts</code></p>
+<h3 id='url-parameters-11'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-11'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>document name</td>
+</tr>
+<tr>
+<td>link</td>
+<td>link to document</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>expiration date of working agreement</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-job-license'>Update User Job License</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/jobs/JOBID/licenses <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "license": "Ms.",
+    "category": "Electronic Equipment Assembler",
+    "state": "American Samoa",
+    "link": "link",
+    "expiration_date": "11/1/2019"
+}'</span>
+</code></pre>
+<p>This endpoint update license of JOBID of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/jobs/JOBID/licenses</code></p>
+<h3 id='url-parameters-12'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-12'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>license</td>
+<td>license name</td>
+</tr>
+<tr>
+<td>category</td>
+<td>license category</td>
+</tr>
+<tr>
+<td>state</td>
+<td>state where license was issued</td>
+</tr>
+<tr>
+<td>link</td>
+<td>link to document</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>expiration date of license</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h1 id='additional-routes'>Additional routes</h1><h2 id='file-upload'>File upload</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/1/files <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+ "category": "avatar",
+ "file": "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",
+ "name": "slika.jpg"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">https</span><span class="p">:</span><span class="err">//s</span><span class="mi">3</span><span class="err">.eu-central</span><span class="mi">-1</span><span class="err">.amazonaws.com/cransten-images/files/avatar/ID/image.jpg</span><span class="w">
+</span></code></pre>
+<p>This endpoint generate file link and returns it, for a user with ID.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://cransten.herokuapp.com/api/users/ID/files</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category</td>
+<td>id of users</td>
+</tr>
+<tr>
+<td>file</td>
+<td>base64 data of image</td>
+</tr>
+<tr>
+<td>name</td>
+<td>name of file with extension</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+If name is not provided it saves a file without extension!
+</aside>
+<h2 id='create-status'>Create Status</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/create/status <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "status": "awaiting"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"verified"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-19 22:12:58"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-19 22:12:58"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a status in database.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://cransten.herokuapp.com/create/status</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id='send-email-to-admin'>Send Email to Admin</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.comapi/users/ID/mails <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint sends an email to an admin, that user wit ID is ready for review.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://cransten.herokuapp.comapi/users/ID/mails</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This are some of errors that might happen in any request. In the table below you can see error codes and their meaning, giving you a hint what your next action should be.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,23 +1908,23 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized -- Your API access token is wrong.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- The user requested is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified user could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a user with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -469,15 +1932,11 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>Gone -- The user requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many users!</td>
 </tr>
 <tr>
 <td>500</td>
@@ -492,10 +1951,7 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="shell">cURL</a>
           </div>
       </div>
     </div>
