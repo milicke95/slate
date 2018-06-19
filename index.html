@@ -239,7 +239,7 @@
                     <a href="#update-a-current-user" class="toc-h2 toc-link" data-title="update-a-current-user">Update a Current User</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                    <a href="#delete-a-specific-user" class="toc-h2 toc-link" data-title="delete-a-specific-user">Delete a Specific User</a>
                   </li>
                   <li>
                     <a href="#register-user" class="toc-h2 toc-link" data-title="register-user">Register User</a>
@@ -656,7 +656,7 @@ Response depends on the role of the user that is sendig request!
 <p>The above route returns JSON structured like the response <a href="#get-all-users">above</a>, only a single object.</p>
 </blockquote>
 
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint retreives a user that sent request.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://cransten.herokuapp.com/api/user</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
@@ -743,7 +743,7 @@ Response depends on the role of the user that is sendig request!
 <td>user social security number</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
+<h2 id='delete-a-specific-user'>Delete a Specific User</h2><pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
   https://cransten.herokuapp.com/api/users/ID <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Authorization: access_token'</span><span class="se">\</span>
