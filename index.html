@@ -265,6 +265,15 @@
                     <a href="#update-user-flags" class="toc-h2 toc-link" data-title="update-user-flags">Update User Flags</a>
                   </li>
                   <li>
+                    <a href="#update-user-status" class="toc-h2 toc-link" data-title="update-user-status">Update User Status</a>
+                  </li>
+                  <li>
+                    <a href="#submit-user-registration" class="toc-h2 toc-link" data-title="submit-user-registration">Submit user registration</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-management-info" class="toc-h2 toc-link" data-title="update-user-management-info">Update User management info</a>
+                  </li>
+                  <li>
                     <a href="#update-user-legal" class="toc-h2 toc-link" data-title="update-user-legal">Update User Legal</a>
                   </li>
                   <li>
@@ -297,10 +306,7 @@
                     <a href="#file-upload" class="toc-h2 toc-link" data-title="file-upload">File upload</a>
                   </li>
                   <li>
-                    <a href="#create-status" class="toc-h2 toc-link" data-title="create-status">Create Status</a>
-                  </li>
-                  <li>
-                    <a href="#send-email-to-admin" class="toc-h2 toc-link" data-title="send-email-to-admin">Send Email to Admin</a>
+                    <a href="#reset-user-password" class="toc-h2 toc-link" data-title="reset-user-password">Reset User Password</a>
                   </li>
               </ul>
           </li>
@@ -377,6 +383,9 @@ You must replace <code>ACCESS TOKEN</code> with your personal API access token.
         </span><span class="s2">"hat_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"shirt_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"eligible"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hr_department"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"percentages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
             </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
@@ -384,6 +393,44 @@ You must replace <code>ACCESS TOKEN</code> with your personal API access token.
             </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
             </span><span class="s2">"total_overview"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="w">
         </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"overall_data_missing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Address"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"cellphone"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Cellphone"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"additional"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Job position"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"legal"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Identity confirmation"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"background_check"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Background information"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"name_identity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Name identity information"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"visual_identity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Visual identity information"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"work_agreement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Work agreement"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Bank information"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"tax_document"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Tax documents"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"hire_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hire_date_humans"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fire_resign_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fire_resign_date_humans"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/06/2018"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3 days ago"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
@@ -400,6 +447,12 @@ You must replace <code>ACCESS TOKEN</code> with your personal API access token.
             </span><span class="s2">"bank_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
             </span><span class="s2">"legal_flag_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
         </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"overall_skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Pool maintenance and Repair"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Home Rehab"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Load and Unload Only Moving Services"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Kitchen &amp; Appliances"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
         </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -518,7 +571,7 @@ You must replace <code>ACCESS TOKEN</code> with your personal API access token.
                 </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registering"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
             </span><span class="s2">"contracts_archive"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
@@ -620,7 +673,7 @@ Response depends on the role of the user that is sendig request!
 </tr>
 <tr>
 <td>proof_of_liability</td>
-<td>user proof of liability name</td>
+<td>user proof of liability file name</td>
 </tr>
 <tr>
 <td>proof_of_liability_link</td>
@@ -647,6 +700,18 @@ Response depends on the role of the user that is sendig request!
 <td>user social security number</td>
 </tr>
 </tbody></table>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the user to update</td>
+</tr>
+</tbody></table>
 <h2 id='get-current-user'>Get Current User</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
   https://cransten.herokuapp.com/api/user <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -659,7 +724,7 @@ Response depends on the role of the user that is sendig request!
 <p>This endpoint retreives a user that sent request.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://cransten.herokuapp.com/api/user</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -743,6 +808,18 @@ Response depends on the role of the user that is sendig request!
 <td>user social security number</td>
 </tr>
 </tbody></table>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
 <h2 id='delete-a-specific-user'>Delete a Specific User</h2><pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
   https://cransten.herokuapp.com/api/users/ID <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -758,7 +835,7 @@ Response depends on the role of the user that is sendig request!
 <p>This endpoint deletes a specific user.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>DELETE https://cransten.herokuapp.com/api/users/ID</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -827,18 +904,30 @@ The message depends on wheter deletion was successful!
 <td>user role (default it is set to user)</td>
 </tr>
 </tbody></table>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
 <h2 id='filter-users'>Filter Users</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
   https://cransten.herokuapp.com/api/users/filter <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Authorization: access_token'</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -d <span class="s1">'{
-    "type": "type2",
-    "keyword": "Milan",
-    "status": "awaiting",
+    "type": "job type",
+    "keyword": "first name or last name",
+    "status": "REgistering",
     "filters":
     [
-        "skill3"
+        "Smart Home Installations"
     ]
 }'</span>
 </code></pre>
@@ -877,6 +966,18 @@ The message depends on wheter deletion was successful!
 <td>user job skills to be filtered</td>
 </tr>
 </tbody></table>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
 Some of body paramteres can be excluded from request.
@@ -898,7 +999,7 @@ Some of body paramteres can be excluded from request.
     </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password changed successfully!"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint changes password of users with ID. </p>
+<p>This endpoint changes password of users with ID, and an email is sent to with notification. </p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/password</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -950,7 +1051,7 @@ The response depends on the success of the request! If an old password was incor
     </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email changed successfully!"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint changes email of users with ID. </p>
+<p>This endpoint changes email of users with ID, and an email is sent to new user email. </p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/email</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
@@ -1011,6 +1112,9 @@ The response depends on the success of the request! If an old email was incorrec
     </span><span class="s2">"hat_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shirt_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eligible"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hr_department"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
         </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
@@ -1018,6 +1122,44 @@ The response depends on the success of the request! If an old email was incorrec
         </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_overview"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"overall_data_missing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"personal"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Address"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"cellphone"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Cellphone"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"additional"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"experience"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Job position"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"legal"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Identity confirmation"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"background_check"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Background information"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"name_identity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Name identity information"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"visual_identity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Visual identity information"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"work_agreement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Work agreement"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Bank information"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"tax_document"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Tax documents"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"hire_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hire_date_humans"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fire_resign_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fire_resign_date_humans"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/06/2018"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3 days ago"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17/06/2018"</span><span class="p">,</span><span class="w">
@@ -1152,7 +1294,7 @@ The response depends on the success of the request! If an old email was incorrec
             </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 days ago"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registering"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -1170,7 +1312,7 @@ The response depends on the success of the request! If an old email was incorrec
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint changes role of users with ID. </p>
+<p>This endpoint changes role of users with ID, and an email is sent to user with notification. </p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/role</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
@@ -1207,30 +1349,36 @@ The response depends on the role of the user that has sent request! If an role i
   -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -d <span class="s1">'{
-  "personal_info_flag": "prsflag",
-  "additional_info_flag": "addflag",
-  "experience_flag": "expflag",
-  "bank_flag": "baflag",
-  "legal_flag": "leflag",
-  "personal_info_flag_msg": "addflagmsg",
-  "additional_info_flag_msg": "addflagmsg",
-  "experience_flag_msg": "expflagmsg",
-  "bank_flag_msg": "baflagmsg",
-  "legal_flag_msg": "leflagmsg"
+  "personal_info_flag": "submitted",
+  "additional_info_flag": "submitted",
+  "experience_flag": "resubmission needed",
+  "bank_flag": "verified",
+  "legal_flag": "submitted",
+  "address_flag": "submitted",
+  "cellphone_flag" : "submitted",
+  "background_check_flag" : "submitted",
+  "work_agreement_flag" : "submitted",
+  "tax_document_flag" : "submitted",
+  "personal_info_flag_msg": "personal info flag message",
+  "additional_info_flag_msg": "additional info flag message",
+  "experience_flag_msg": "experience flag message",
+  "bank_flag_msg": "bank flag message",
+  "legal_flag_msg": "legal flag message",
+  "address_flag_msg": "address flag message",
+  "cellhpone_flag_msg": "cellphone flag message",
+  "background_check_flag_msg": "backgorund check flag message",
+  "work_agreement_flag_msg": "work agreement flag message",
+  "tax_document_flag_msg": "tax document flag message"
 }'</span>
 </code></pre>
 <blockquote>
 <p>The above route returns JSON structured like response <a href="#change-user-role">above</a>:</p>
 </blockquote>
 
-<aside class="notice">
-All of the parameters are optionals.
-</aside>
-
 <p>This endpoint changes flags of users with ID, thats suggest if users should update neccessary sections. </p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/flag</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='body-parameters-4'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1258,6 +1406,26 @@ All of the parameters are optionals.
 <td>legal section flag</td>
 </tr>
 <tr>
+<td>address_flag</td>
+<td>address section flag</td>
+</tr>
+<tr>
+<td>cellphone_flag</td>
+<td>cellphone section flag</td>
+</tr>
+<tr>
+<td>background_check_flag</td>
+<td>background check section flag</td>
+</tr>
+<tr>
+<td>work_agreement_flag</td>
+<td>work agreement section flag</td>
+</tr>
+<tr>
+<td>tax_document_flag</td>
+<td>tax document section flag</td>
+</tr>
+<tr>
 <td>personal_info_flag_msg</td>
 <td>personal section flag message</td>
 </tr>
@@ -1277,8 +1445,28 @@ All of the parameters are optionals.
 <td>legal_flag_msg</td>
 <td>legal section flag message</td>
 </tr>
+<tr>
+<td>address_flag_msg</td>
+<td>address section flag message</td>
+</tr>
+<tr>
+<td>cellphone_flag_msg</td>
+<td>cellphone section flag message</td>
+</tr>
+<tr>
+<td>background_check_flag_msg</td>
+<td>background check section flag message</td>
+</tr>
+<tr>
+<td>work_agreement_flag_msg</td>
+<td>work agreement section flag message</td>
+</tr>
+<tr>
+<td>tax_document_flag_msg</td>
+<td>tax document section flag message</td>
+</tr>
 </tbody></table>
-<h3 id='body-parameters-4'>BODY Parameters</h3>
+<h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1286,8 +1474,132 @@ All of the parameters are optionals.
 </tr>
 </thead><tbody>
 <tr>
-<td>role</td>
-<td>new role of user</td>
+<td>ID</td>
+<td>The id of user</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+<h2 id='update-user-status'>Update User Status</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/status <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "status": "Verified",
+}'</span>
+</code></pre>
+<p>This endpoint update user status with ID, and response is like <a href="#change-user-role">above</a>. </p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/status</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-5'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>new user status</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Response depends of user role, only admins and super admins can change user roles.
+</aside>
+<h2 id='submit-user-registration'>Submit user registration</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/submit <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "status": "Verified",
+}'</span>
+</code></pre>
+<p>This endpoint submit user registration by seting all user flags with ID to &quot;submitted&quot; and status to &quot;Needs verification&quot;. Response is like <a href="#change-user-role">above</a>. </p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://cransten.herokuapp.com/api/users/ID/submit</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The id of user</td>
+</tr>
+</tbody></table>
+<h2 id='update-user-management-info'>Update User management info</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/manage <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "active": "true",
+    "eligible": "false",
+    "hr_department": "true",
+    "fire_resign_date": "18/06/2018",
+    "hire_date": "18/06/2018"
+}'</span>
+</code></pre>
+<p>This endpoint submit user registration by seting all user flags with ID to &quot;submitted&quot; and status to &quot;Needs verification&quot;. Response is like <a href="#change-user-role">above</a>. </p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST https://cransten.herokuapp.com/api/users/ID/manage</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The id of user</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>active</td>
+<td>true if user is active</td>
+</tr>
+<tr>
+<td>eligible</td>
+<td>true if user eligible for rehire</td>
+</tr>
+<tr>
+<td>hr_department</td>
+<td>true if user works in HR department</td>
+</tr>
+<tr>
+<td>fire_resign_date</td>
+<td>fire or resign date</td>
+</tr>
+<tr>
+<td>hire_date</td>
+<td>hire date</td>
 </tr>
 </tbody></table>
 <h2 id='update-user-legal'>Update User Legal</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
@@ -1307,9 +1619,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update legal of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h3 id='http-request-8'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/legals</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
+<h3 id='url-parameters-9'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1318,10 +1630,10 @@ All of the parameters are optionals.
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>id of user</td>
+<td>The id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-5'>BODY Parameters</h3>
+<h3 id='body-parameters-6'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1379,9 +1691,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update address of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-9'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/address</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
+<h3 id='url-parameters-10'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1393,7 +1705,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-6'>BODY Parameters</h3>
+<h3 id='body-parameters-7'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1437,9 +1749,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update cellphone of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
-<h3 id='http-request-7'>HTTP Request</h3>
+<h3 id='http-request-10'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/cellphones</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
+<h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1451,7 +1763,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-7'>BODY Parameters</h3>
+<h3 id='body-parameters-8'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1488,9 +1800,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update bank info of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
+<h3 id='http-request-11'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/banks</code></p>
-<h3 id='url-parameters-8'>URL Parameters</h3>
+<h3 id='url-parameters-12'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1502,7 +1814,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-8'>BODY Parameters</h3>
+<h3 id='body-parameters-9'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1543,9 +1855,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update tax document of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
+<h3 id='http-request-12'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/bankdoucments</code></p>
-<h3 id='url-parameters-9'>URL Parameters</h3>
+<h3 id='url-parameters-13'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1557,7 +1869,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-9'>BODY Parameters</h3>
+<h3 id='body-parameters-10'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1608,9 +1920,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update job of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
+<h3 id='http-request-13'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/jobs</code></p>
-<h3 id='url-parameters-10'>URL Parameters</h3>
+<h3 id='url-parameters-14'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1622,7 +1934,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-10'>BODY Parameters</h3>
+<h3 id='body-parameters-11'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1678,9 +1990,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update working agreement of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-11'>HTTP Request</h3>
+<h3 id='http-request-14'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/contracts</code></p>
-<h3 id='url-parameters-11'>URL Parameters</h3>
+<h3 id='url-parameters-15'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1692,7 +2004,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-11'>BODY Parameters</h3>
+<h3 id='body-parameters-12'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1730,9 +2042,9 @@ All of the parameters are optionals.
 }'</span>
 </code></pre>
 <p>This endpoint update license of JOBID of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
-<h3 id='http-request-12'>HTTP Request</h3>
+<h3 id='http-request-15'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/jobs/JOBID/licenses</code></p>
-<h3 id='url-parameters-12'>URL Parameters</h3>
+<h3 id='url-parameters-16'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1744,7 +2056,7 @@ All of the parameters are optionals.
 <td>id of user</td>
 </tr>
 </tbody></table>
-<h3 id='body-parameters-12'>BODY Parameters</h3>
+<h3 id='body-parameters-13'>BODY Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1804,7 +2116,7 @@ All of the parameters are optionals.
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>id of user</td>
+<td>The Id of user</td>
 </tr>
 </tbody></table>
 <h3 id='body-parameters'>BODY Parameters</h3>
@@ -1816,7 +2128,7 @@ All of the parameters are optionals.
 </thead><tbody>
 <tr>
 <td>category</td>
-<td>id of users</td>
+<td>category of file</td>
 </tr>
 <tr>
 <td>file</td>
@@ -1831,28 +2143,33 @@ All of the parameters are optionals.
 <aside class="notice">
 If name is not provided it saves a file without extension!
 </aside>
-<h2 id='create-status'>Create Status</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  https://cransten.herokuapp.com/create/status <span class="se">\</span>
+<h2 id='reset-user-password'>Reset User Password</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://cransten.herokuapp.com/forgotten-password/ <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'{
-    "status": "awaiting"
-}'</span>
 </code></pre>
 <blockquote>
 <p>The above route returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"verified"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-19 22:12:58"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-19 22:12:58"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint creates a status in database.</p>
+<p>This endpoint resets user password and an email is sent to user with new generated password.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://cransten.herokuapp.com/create/status</code></p>
+<p><code>POST https://cransten.herokuapp.com/forgotten-password</code></p>
+<h3 id='body-parameters-2'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>email of user</td>
+</tr>
+</tbody></table>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1865,40 +2182,12 @@ If name is not provided it saves a file without extension!
 <td>-</td>
 </tr>
 </tbody></table>
-<h2 id='send-email-to-admin'>Send Email to Admin</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  https://cransten.herokuapp.comapi/users/ID/mails <span class="se">\</span>
-  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-</code></pre>
-<blockquote>
-<p>The above route returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint sends an email to an admin, that user wit ID is ready for review.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://cransten.herokuapp.comapi/users/ID/mails</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>id of user</td>
-</tr>
-</tbody></table>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This are some of errors that might happen in any request. In the table below you can see error codes and their meaning, giving you a hint what your next action should be.
 </aside>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>The Cransten API uses the following error codes:</p>
 
 <table><thead>
 <tr>
