@@ -247,6 +247,9 @@
                   <li>
                     <a href="#filter-users" class="toc-h2 toc-link" data-title="filter-users">Filter Users</a>
                   </li>
+                  <li>
+                    <a href="#get-all-user-logs" class="toc-h2 toc-link" data-title="get-all-user-logs">Get All User Logs</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -296,6 +299,9 @@
                   </li>
                   <li>
                     <a href="#update-user-job-license" class="toc-h2 toc-link" data-title="update-user-job-license">Update User Job License</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-notes" class="toc-h2 toc-link" data-title="update-user-notes">Update User Notes</a>
                   </li>
               </ul>
           </li>
@@ -982,6 +988,68 @@ The message depends on wheter deletion was successful!
 <aside class="notice">
 Some of body paramteres can be excluded from request.
 </aside>
+<h2 id='get-all-user-logs'>Get All User Logs</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/logs/ <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above route returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"log"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thursday, 9 August, 2018 @ 5:00:27 AM Example Examplovic address info changed by Example Examplovic&lt;br /&gt;
+        city from Corkeryside to fsdfs&lt;br /&gt;
+        state from United States to s&lt;br /&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Address Info Changed"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09 05:00:27.000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Denver"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09 05:00:27.000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Denver"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4 seconds ago"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4 seconds ago"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"log"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thursday, 9 August, 2018 @ 4:53:22 AM Example Examplovic address info changed by Example Examplovic&lt;br /&gt;;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Address Info Changed"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09 04:53:22.000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Denver"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-09 04:53:22.000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Denver"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"created_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7 minutes ago"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at_humans"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7 minutes ago"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retreives all logs of user with ID.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://cransten.herokuapp.com/api/users/ID/logs</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The id of user</td>
+</tr>
+</tbody></table>
 <h1 id='user-updates'>User Updates</h1><h2 id='change-user-password'>Change User Password</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
   https://cransten.herokuapp.com/api/users/ID/password <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -1618,7 +1686,8 @@ Response depends of user role, only admins and super admins can change user role
     "name_verification_id": "Id"
 }'</span>
 </code></pre>
-<p>This endpoint update legal of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
+<p>This endpoint update or create legal of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>. 
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-8'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/legals</code></p>
 <h3 id='url-parameters-9'>URL Parameters</h3>
@@ -1690,7 +1759,8 @@ All of the parameters are optionals.
     "primary": "1"
 }'</span>
 </code></pre>
-<p>This endpoint update address of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<p>This endpoint update or create, address of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-9'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/address</code></p>
 <h3 id='url-parameters-10'>URL Parameters</h3>
@@ -1748,7 +1818,8 @@ All of the parameters are optionals.
     "primary": "1"
 }'</span>
 </code></pre>
-<p>This endpoint update cellphone of users with ID, and response is like <a href="#change-user-role">above</a>. </p>
+<p>This endpoint update or create cellphone of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>. 
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-10'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/cellphones</code></p>
 <h3 id='url-parameters-11'>URL Parameters</h3>
@@ -1799,7 +1870,8 @@ All of the parameters are optionals.
     "primary": "1"
 }'</span>
 </code></pre>
-<p>This endpoint update bank info of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<p>This endpoint update or create bank info of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-11'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/banks</code></p>
 <h3 id='url-parameters-12'>URL Parameters</h3>
@@ -1854,7 +1926,8 @@ All of the parameters are optionals.
     "archived_on": "6/2/2015"
 }'</span>
 </code></pre>
-<p>This endpoint update tax document of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<p>This endpoint update or create tax document of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-12'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/bankdoucments</code></p>
 <h3 id='url-parameters-13'>URL Parameters</h3>
@@ -1919,7 +1992,8 @@ All of the parameters are optionals.
             ]
 }'</span>
 </code></pre>
-<p>This endpoint update job of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<p>This endpoint update or create job of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-13'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/jobs</code></p>
 <h3 id='url-parameters-14'>URL Parameters</h3>
@@ -1989,7 +2063,8 @@ All of the parameters are optionals.
     "expiration_date": "11/21/2016"
 }'</span>
 </code></pre>
-<p>This endpoint update working agreement of users with ID, and response is like <a href="#change-user-role">above</a>.</p>
+<p>This endpoint update or create working agreement of users with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
 <h3 id='http-request-14'>HTTP Request</h3>
 <p><code>PATCH https://cransten.herokuapp.com/api/users/ID/contracts</code></p>
 <h3 id='url-parameters-15'>URL Parameters</h3>
@@ -2088,6 +2163,56 @@ All of the parameters are optionals.
 <aside class="notice">
 All of the parameters are optionals.
 </aside>
+<h2 id='update-user-notes'>Update User Notes</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
+  https://cransten.herokuapp.com/api/users/ID/notes/ <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: access_token'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "title": "Ms.",
+    "note": "Electronic Equipment Assembler",
+    "documents": [
+        "name": "doc"
+        "link": "link.pdf"
+        ]
+}'</span>
+</code></pre>
+<p>This endpoint update or create note for user with ID, whether id attribute is present in request body, and response is like <a href="#change-user-role">above</a>.
+If id attribute is present it updates existing object.</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>PATCH https://cransten.herokuapp.com/api/users/ID/notes</code></p>
+<h3 id='url-parameters-17'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>id of user</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-14'>BODY Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>note title</td>
+</tr>
+<tr>
+<td>note</td>
+<td>note content</td>
+</tr>
+<tr>
+<td>documents</td>
+<td>array of documents with name and link</td>
+</tr>
+</tbody></table>
 <h1 id='additional-routes'>Additional routes</h1><h2 id='file-upload'>File upload</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
   https://cransten.herokuapp.com/api/users/1/files <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
