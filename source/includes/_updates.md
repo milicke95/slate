@@ -21,7 +21,7 @@ curl -X PATCH \
 }
 ```
 
-This endpoint changes password of users with ID. 
+This endpoint changes password of users with ID, and an email is sent to with notification. 
 
 ### HTTP Request
 
@@ -66,7 +66,7 @@ curl -X PATCH \
 }
 ```
 
-This endpoint changes email of users with ID. 
+This endpoint changes email of users with ID, and an email is sent to new user email. 
 
 ### HTTP Request
 
@@ -119,6 +119,9 @@ curl -X PATCH \
 	"hat_size": "L",
 	"shirt_size": "L",
 	"role": "user",
+	"active": null,
+	"eligible": null,
+	"hr_department": null,
 	"percentages": {
 		"personal": 100,
 		"experience": 100,
@@ -126,6 +129,44 @@ curl -X PATCH \
 		"bank": 100,
 		"total_overview": 90
 	},
+	"overall_data_missing": {
+		"personal": [],
+		"address": [
+			"Address"
+		],
+		"cellphone": [
+			"Cellphone"
+		],
+		"additional": [],
+		"experience": [
+			"Job position"
+		],
+		"legal": [
+			"Identity confirmation"
+		],
+		"background_check": [
+			"Background information"
+		],
+		"name_identity": [
+			"Name identity information"
+		],
+		"visual_identity": [
+			"Visual identity information"
+		],
+		"work_agreement": [
+			"Work agreement"
+		],
+		"bank": [
+			"Bank information"
+		],
+		"tax_document": [
+			"Tax documents"
+		]
+	},
+	"hire_date": null,
+	"hire_date_humans": null,
+	"fire_resign_date": null,
+	"fire_resign_date_humans": null,
 	"created_at": "16/06/2018",
 	"created_at_humans": "3 days ago",
 	"updated_at": "17/06/2018",
@@ -260,7 +301,7 @@ curl -X PATCH \
 			"updated_at_humans": "2 days ago"
 		}
 	],
-	"status": "awaiting",
+	"status": "Registering",
 	"contracts": {
 		"contracts": [
 		{
@@ -279,7 +320,7 @@ curl -X PATCH \
 }
 ```
 
-This endpoint changes role of users with ID. 
+This endpoint changes role of users with ID, and an email is sent to user with notification. 
 
 ### HTTP Request
 
@@ -310,23 +351,29 @@ curl -X PATCH \
   -H 'Authorization: access_token' \
   -H 'Content-Type: application/json' \
   -d '{
-  "personal_info_flag": "prsflag",
-  "additional_info_flag": "addflag",
-  "experience_flag": "expflag",
-  "bank_flag": "baflag",
-  "legal_flag": "leflag",
-  "personal_info_flag_msg": "addflagmsg",
-  "additional_info_flag_msg": "addflagmsg",
-  "experience_flag_msg": "expflagmsg",
-  "bank_flag_msg": "baflagmsg",
-  "legal_flag_msg": "leflagmsg"
+  "personal_info_flag": "submitted",
+  "additional_info_flag": "submitted",
+  "experience_flag": "resubmission needed",
+  "bank_flag": "verified",
+  "legal_flag": "submitted",
+  "address_flag": "submitted",
+  "cellphone_flag" : "submitted",
+  "background_check_flag" : "submitted",
+  "work_agreement_flag" : "submitted",
+  "tax_document_flag" : "submitted",
+  "personal_info_flag_msg": "personal info flag message",
+  "additional_info_flag_msg": "additional info flag message",
+  "experience_flag_msg": "experience flag message",
+  "bank_flag_msg": "bank flag message",
+  "legal_flag_msg": "legal flag message",
+  "address_flag_msg": "address flag message",
+  "cellhpone_flag_msg": "cellphone flag message",
+  "background_check_flag_msg": "backgorund check flag message",
+  "work_agreement_flag_msg": "work agreement flag message",
+  "tax_document_flag_msg": "tax document flag message"
 }'
 ```
 > The above route returns JSON structured like response [above](#change-user-role):
-
-<aside class="notice">
-All of the parameters are optionals.
-</aside>
 
 This endpoint changes flags of users with ID, thats suggest if users should update neccessary sections. 
 
@@ -334,7 +381,7 @@ This endpoint changes flags of users with ID, thats suggest if users should upda
 
 `PATCH https://cransten.herokuapp.com/api/users/ID/flag`
 
-### URL Parameters
+### BODY Parameters
 
 Parameter | Description
 --------- | -----------
@@ -343,17 +390,130 @@ additional_info_flag | additional section flag
 experience_flag | experience section flag
 bank_flag | bank section flag
 legal_flag | legal section flag
+address_flag | address section flag
+cellphone_flag | cellphone section flag
+background_check_flag | background check section flag
+work_agreement_flag | work agreement section flag
+tax_document_flag | tax document section flag
 personal_info_flag_msg | personal section flag message
 additional_info_flag_msg | additional section flag message
 experience_flag_msg | experience section flag message
 bank_flag_msg | bank section flag message
 legal_flag_msg | legal section flag message
+address_flag_msg | address section flag message
+cellphone_flag_msg | cellphone section flag message
+background_check_flag_msg | background check section flag message
+work_agreement_flag_msg | work agreement section flag message
+tax_document_flag_msg | tax document section flag message
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The id of user
+
+<aside class="notice">
+All of the parameters are optionals.
+</aside>
+
+## Update User Status
+
+```shell
+curl -X PATCH \
+  https://cransten.herokuapp.com/api/users/ID/status \
+  -H 'Accept: application/json' \
+  -H 'Authorization: access_token' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "status": "Verified",
+}'
+```
+
+This endpoint update user status with ID, and response is like [above](#change-user-role). 
+
+### HTTP Request
+
+`PATCH https://cransten.herokuapp.com/api/users/ID/status`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID		  | The id of user
 
 ### BODY Parameters
 
 Parameter | Description
 --------- | -----------
-role | new role of user
+status	| new user status
+
+<aside class="notice">
+Response depends of user role, only admins and super admins can change user roles.
+</aside>
+
+## Submit user registration
+
+```shell
+curl -X GET \
+  https://cransten.herokuapp.com/api/users/ID/submit \
+  -H 'Accept: application/json' \
+  -H 'Authorization: access_token' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "status": "Verified",
+}'
+```
+
+This endpoint submit user registration by seting all user flags with ID to "submitted" and status to "Needs verification". Response is like [above](#change-user-role). 
+
+### HTTP Request
+
+`GET https://cransten.herokuapp.com/api/users/ID/submit`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID		  | The id of user
+
+## Update User management info
+
+```shell
+curl -X POST \
+  https://cransten.herokuapp.com/api/users/ID/manage \
+  -H 'Accept: application/json' \
+  -H 'Authorization: access_token' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "active": "true",
+	"eligible": "false",
+	"hr_department": "true",
+	"fire_resign_date": "18/06/2018",
+	"hire_date": "18/06/2018"
+}'
+```
+
+This endpoint submit user registration by seting all user flags with ID to "submitted" and status to "Needs verification". Response is like [above](#change-user-role). 
+
+### HTTP Request
+
+`POST https://cransten.herokuapp.com/api/users/ID/manage`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID		  | The id of user
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+active		  | true if user is active
+eligible	| true if user eligible for rehire
+hr_department		| true if user works in HR department
+fire_resign_date	| fire or resign date
+hire_date		| hire date
 
 ## Update User Legal
 
@@ -385,7 +545,7 @@ This endpoint update legal of users with ID, and response is like [above](#chang
 
 Parameter | Description
 --------- | -----------
-ID		  | id of user
+ID		  | The id of user
 
 ### BODY Parameters
 

@@ -28,6 +28,9 @@ curl -X GET \
 		"hat_size": "L",
 		"shirt_size": "L",
 		"role": "user",
+		"active": null,
+        "eligible": null,
+        "hr_department": null,
 		"percentages": {
 			"personal": 100,
 			"experience": 100,
@@ -35,6 +38,44 @@ curl -X GET \
 			"bank": 100,
 			"total_overview": 90
 		},
+		"overall_data_missing": {
+            "personal": [],
+            "address": [
+                "Address"
+            ],
+            "cellphone": [
+                "Cellphone"
+            ],
+            "additional": [],
+            "experience": [
+                "Job position"
+            ],
+            "legal": [
+                "Identity confirmation"
+            ],
+            "background_check": [
+                "Background information"
+            ],
+            "name_identity": [
+                "Name identity information"
+            ],
+            "visual_identity": [
+                "Visual identity information"
+            ],
+            "work_agreement": [
+                "Work agreement"
+            ],
+            "bank": [
+                "Bank information"
+            ],
+            "tax_document": [
+                "Tax documents"
+            ]
+        },
+		"hire_date": null,
+        "hire_date_humans": null,
+        "fire_resign_date": null,
+        "fire_resign_date_humans": null,
 		"created_at": "16/06/2018",
 		"created_at_humans": "3 days ago",
 		"updated_at": "17/06/2018",
@@ -51,6 +92,12 @@ curl -X GET \
 			"bank_flag_msg": null,
 			"legal_flag_msg": null
 		},
+		"overall_skills": [
+			"Pool maintenance and Repair",
+			"Home Rehab",
+			"Load and Unload Only Moving Services",
+			"Kitchen & Appliances"
+		],
 		"notes": [],
 		"addresses": [
 			{
@@ -169,7 +216,7 @@ curl -X GET \
 				"updated_at_humans": "2 days ago"
 			}
 		],
-		"status": "awaiting",
+		"status": "Registering",
 		"contracts": {
 			"contracts": [],
 			"contracts_archive": []
@@ -257,13 +304,19 @@ Parameter | Description
 first_name | updates first name
 last_name | updates last name
 middle_name | update middle name
-proof_of_liability | user proof of liability name
+proof_of_liability | user proof of liability file name
 proof_of_liability_link | user proof of liabilty link
 user_image | link to user image
 date_of_birth | user date of birth
 hat_size | user hat size
 shirt_size | user shirt size
 social_number | user social security number
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID 		  | The ID of the user to update
 
 ## Get Current User
 
@@ -331,6 +384,12 @@ date_of_birth | user date of birth
 hat_size | user hat size
 shirt_size | user shirt size
 social_number | user social security number
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+- | -
 
 ## Delete a Specific User
 
@@ -402,6 +461,12 @@ email | user email
 password | user password
 role | user role (default it is set to user)
 
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+- 		  | -
+
 ## Filter Users
 
 ```shell
@@ -411,12 +476,12 @@ curl -X POST \
   -H 'Authorization: access_token'
   -H 'Content-Type: application/json' \
   -d '{
-	"type": "type2",
-	"keyword": "Milan",
-	"status": "awaiting",
+	"type": "job type",
+	"keyword": "first name or last name",
+	"status": "REgistering",
 	"filters":
 	[
-		"skill3"
+		"Smart Home Installations"
 	]
 }'
 ```
@@ -441,6 +506,12 @@ type | user job type to be filtered
 keyword | user last name or first name to be filtered
 status | user status to be filtered
 filters | user job skills to be filtered
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+- 		  | -
 
 <aside class="notice">
 Some of body paramteres can be excluded from request.

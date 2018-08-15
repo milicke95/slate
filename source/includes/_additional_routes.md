@@ -31,13 +31,13 @@ This endpoint generate file link and returns it, for a user with ID.
 
 Parameter | Description
 --------- | -----------
-ID		  |  id of user
+ID		  |  The Id of user
 
 ### BODY Parameters
 
 Parameter | Description
 --------- | -----------
-category  |  id of users
+category  |  category of file
 file  |  base64 data of image
 name  |  name of file with extension
 
@@ -45,49 +45,12 @@ name  |  name of file with extension
 If name is not provided it saves a file without extension!
 </aside>
 
-## Create Status
+## Reset User Password
 
 ```shell
 curl -X POST \
-  https://cransten.herokuapp.com/create/status \
+  https://cransten.herokuapp.com/forgotten-password/ \
   -H 'Accept: application/json' \
-  -H 'Authorization: access_token' \
-  -H 'Content-Type: application/json' \
-  -d '{
-	"status": "awaiting"
-}'
-```
-
-> The above route returns JSON structured like this:
-
-```json
-{
-    "status": "verified",
-    "updated_at": "2018-06-19 22:12:58",
-    "created_at": "2018-06-19 22:12:58",
-    "id": 2
-}
-```
-
-This endpoint creates a status in database.
-
-### HTTP Request
-
-`POST https://cransten.herokuapp.com/create/status`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
--		  |  -
-
-## Send Email to Admin
-
-```shell
-curl -X GET \
-  https://cransten.herokuapp.comapi/users/ID/mails \
-  -H 'Accept: application/json' \
-  -H 'Authorization: access_token' \
   -H 'Content-Type: application/json' \
 ```
 
@@ -99,14 +62,20 @@ curl -X GET \
 }
 ```
 
-This endpoint sends an email to an admin, that user wit ID is ready for review.
+This endpoint resets user password and an email is sent to user with new generated password.
 
 ### HTTP Request
 
-`GET https://cransten.herokuapp.comapi/users/ID/mails`
+`POST https://cransten.herokuapp.com/forgotten-password`
+
+### BODY Parameters
+
+Parameter | Description
+--------- | -----------
+email		  |  email of user
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID		  |  id of user
+-		  |  -

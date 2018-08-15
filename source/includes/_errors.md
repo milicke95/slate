@@ -4,7 +4,7 @@
 This are some of errors that might happen in any request. In the table below you can see error codes and their meaning, giving you a hint what your next action should be.
 </aside>
 
-The Kittn API uses the following error codes:
+The Cransten API uses the following error codes:
 
 
 Error Code | Meaning
